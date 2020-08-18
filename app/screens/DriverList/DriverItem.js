@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export const DriverItem = ({ driver }) => {
+export const DriverItem = React.memo(({ driver }) => {
   const navigation = useNavigation();
   const fullName = `${driver.givenName} ${driver.familyName}`;
 
@@ -21,7 +21,7 @@ export const DriverItem = ({ driver }) => {
       </Text>
     </TouchableOpacity>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

@@ -29,7 +29,7 @@ export const Results = ({ route }) => {
     []
   );
 
-  const racesKeyExtractor = React.useCallback((_, index) => index, []);
+  const racesKeyExtractor = React.useCallback((_, index) => `${index}`, []);
 
   return (
     <View style={styles.screenContainer}>

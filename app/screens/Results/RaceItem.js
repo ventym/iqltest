@@ -7,7 +7,7 @@ import {
 
 import { RaceResultItem } from './RaceResultItem';
 
-export const RaceItem = ({ race }) => {
+export const RaceItem = React.memo(({ race }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>
@@ -22,7 +22,7 @@ export const RaceItem = ({ race }) => {
       ))}
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-export const RaceResultItem = ({ result }) => {
+export const RaceResultItem = React.memo(({ result }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
@@ -31,7 +31,7 @@ export const RaceResultItem = ({ result }) => {
       </Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { actions } from '../../actions';
 
-export const Paging = () => {
+export const Paging = React.memo(() => {
   const dispatch = useDispatch();
 
   const pageIndex = useSelector(state => state.drivers.pageIndex);
@@ -60,7 +60,7 @@ export const Paging = () => {
       </TouchableOpacity>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
